@@ -38,7 +38,7 @@ p_prof = ggplot(full_dt[type == "profile"], aes(x = x, y = y, color = set)) +
   theme(axis.text.x = element_blank(),
         axis.text.y = element_text(size = 10),
         axis.line = element_line(size = 1.5), 
-        axis.ticks = element_line(size = 2, colour = "black"),
+        axis.ticks = element_line(size = 1.5, colour = "black"),
         axis.ticks.length = unit(.45, "cm"), 
         legend.position = "top", 
         legend.text = element_text(size = 10),
@@ -57,12 +57,12 @@ p_ticks = ggplot(hidt,
   labs(x = "hit index", y = "") +
   scale_color_manual(values = g_colors) +
   guides(color = "none") +
-  theme(panel.background = element_blank(), 
+  theme(panel.background = element_blank(), axis.line.y = element_blank(),
         axis.text.y = element_blank(), 
         axis.ticks.y = element_blank(),
         axis.text.x = element_text(size = 10),
-        axis.line.x = element_line(size = 2), 
-        axis.ticks.x = element_line(size = 2, colour = "black"),
+        axis.line.x = element_line(size = 1.5), 
+        axis.ticks.x = element_line(size = 1.5, colour = "black"),
         axis.ticks.length = unit(.45, "cm"),
         axis.title = element_text(size = 16))
 
